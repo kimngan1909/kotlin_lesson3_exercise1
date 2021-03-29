@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RadioGroup
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:id="@+id/radioGroup">
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/doraemonBtn"
+        android:text="Doraemon"
+        android:onClick="chooseTurle"/>
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/nobitaBtn"
+        android:text="Nobita"
+        android:onClick="chooseTurle"/>
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/xukaBtn"
+        android:text="Xuka"
+        android:onClick="chooseTurle"/>
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/chaienBtn"
+        android:text="Chaien"
+        android:onClick="chooseTurle"/>
+
+</RadioGroup>
+
+    <TextView
+        android:id="@+id/chooseTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Please choose"
+        android:textColor="#994AC3"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ImageView
+        android:layout_height="240dp"
+        android:layout_width="240dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:id="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/chooseTextView"
+        tools:srcCompat="@tools:sample/avatars"
+        />
+
+    <Switch
+        android:id="@+id/hideImgSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hide image"
+        android:textColor="#FF5722"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
